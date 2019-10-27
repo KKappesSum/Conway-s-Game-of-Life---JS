@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script src="gui.js"></script>
+    <script src="life.js"></script>
+    <script src="Grid.js"></script>
+    <script src="Config.js"></script>
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <p>Instructions:</p>
+    <p>1.) Choose a board size.</p>
+    <p>2.) Select starting cells to give life to.</p>
+    <p>3.) Start the game and watch it run.</p>
+    <p>
+        **Warning: Boards larger than 300X300 cells take a while to generate.**<br>
+        **They are also hard to use due to a small cell size.**
+    </p>
+    <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Background information</a> to help understand the game</p>
+    <div id="setupButtons">
+        <button id="-100" type="button" onclick="changeBoard(-100)">-100</button>
+        <button id="-50" type="button" onclick="changeBoard(-50)">-50</button>
+        <button id="-10" type="button" onclick="changeBoard(-10)">-10</button>
+        <span id="boardSize">50</span>
+        <button id="+10" type="button" onclick="changeBoard(10)">+10</button>
+        <button id="+50" type="button" onclick="changeBoard(50)">+50</button>
+        <button id="+100" type="button" onclick="changeBoard(100)">+100</button><br>
+        <button id="start" type="submit" onclick="setup()">Start Game</button>
+    </div>
+    <div id="boardDiv"></div>
+    <div id="controlDiv"></div>
+</body>
+</html>
